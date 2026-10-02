@@ -8,4 +8,7 @@
     <string name="bg_description">Gambar latar belakang</string>
     <string name="logo_description">Logo UMY</string>
     <string name="profile_description">Foto profil</string>
+    <string name="username_label">Username / Email</string>
+    <string name="password_label">Password</string>
+    <string name="login_button">LOGIN</string>
 </resources>

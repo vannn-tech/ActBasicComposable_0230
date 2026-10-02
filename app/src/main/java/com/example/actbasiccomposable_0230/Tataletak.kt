@@ -7,10 +7,14 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -106,23 +110,36 @@ fun LogoSection() {
 
 @Composable
 fun UserInfoSection() {
-    Text(
-        text = stringResource(id = R.string.user_name_label),
-        fontSize = 14.sp,
-        color = RedAccent
-    )
-    Text(
-        text = stringResource(id = R.string.user_name),
-        fontSize = 14.sp,
-        fontWeight = FontWeight.Bold,
-        color = BluePrimary
-    )
-    Text(
-        text = stringResource(id = R.string.user_nim),
-        fontSize = 20.sp,
-        fontWeight = FontWeight.Bold,
-        color = DarkText
-    )
+    Card(
+        shape = RoundedCornerShape(12.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White.copy(alpha = 0.85f)),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp)
+    ) {
+        Column(
+            modifier = Modifier.padding(12.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = stringResource(id = R.string.user_name_label),
+                fontSize = 14.sp,
+                color = RedAccent
+            )
+            Text(
+                text = stringResource(id = R.string.user_name),
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold,
+                color = BluePrimary
+            )
+            Text(
+                text = stringResource(id = R.string.user_nim),
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold,
+                color = DarkText
+            )
+        }
+    }
 }
 
 @Composable

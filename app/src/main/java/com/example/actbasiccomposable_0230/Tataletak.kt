@@ -44,6 +44,9 @@ import com.example.actbasiccomposable_0230.ui.theme.SoftBackground
 
 @Composable
 fun TugasLoginScreen(modifier: Modifier = Modifier) {
+    var username by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+
     Box(
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -58,13 +61,28 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
         ) {
             HeaderSection()
 
-            Spacer(modifier = Modifier.height(44.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
             LogoSection()
 
-            Spacer(modifier = Modifier.height(46.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
             UserInfoSection()
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            LoginInputSection(
+                username = username,
+                onUsernameChange = { username = it },
+                password = password,
+                onPasswordChange = { password = it }
+            )
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+            LoginButtonSection(
+                onLoginClick = { /* Handle login click */ }
+            )
 
             Spacer(modifier = Modifier.height(12.dp))
 

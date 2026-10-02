@@ -44,6 +44,10 @@ import com.example.actbasiccomposable_0230.ui.theme.DarkText
 import com.example.actbasiccomposable_0230.ui.theme.RedAccent
 import com.example.actbasiccomposable_0230.ui.theme.SoftBackground
 
+/**
+ * Layar utama tugas login yang menampilkan background, logo,
+ * informasi user, form input username/password, serta foto profil.
+ */
 @Composable
 fun TugasLoginScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current
@@ -105,6 +109,9 @@ fun TugasLoginScreenPreview() {
     }
 }
 
+/**
+ * Komponen latar belakang gambar penuh.
+ */
 @Composable
 fun BackgroundImage() {
     Image(
@@ -115,6 +122,9 @@ fun BackgroundImage() {
     )
 }
 
+/**
+ * Komponen judul dan sub-judul halaman login.
+ */
 @Composable
 fun HeaderSection() {
     Text(
@@ -130,6 +140,9 @@ fun HeaderSection() {
     )
 }
 
+/**
+ * Komponen penampil logo UMY.
+ */
 @Composable
 fun LogoSection() {
     Image(
@@ -140,6 +153,9 @@ fun LogoSection() {
     )
 }
 
+/**
+ * Komponen kartu informasi identitas user (nama dan NIM).
+ */
 @Composable
 fun UserInfoSection() {
     Card(
@@ -174,6 +190,9 @@ fun UserInfoSection() {
     }
 }
 
+/**
+ * Komponen foto profil masjid berbentuk lingkaran.
+ */
 @Composable
 fun ProfileImageSection() {
     Box(
@@ -199,6 +218,9 @@ fun ProfileImageSection() {
     }
 }
 
+/**
+ * Komponen input form username dan password.
+ */
 @Composable
 fun LoginInputSection(
     username: String,
@@ -233,6 +255,9 @@ fun LoginInputSection(
     }
 }
 
+/**
+ * Komponen tombol aksi login.
+ */
 @Composable
 fun LoginButtonSection(
     onLoginClick: () -> Unit

@@ -32,12 +32,7 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        Image(
-            painter = painterResource(id = R.drawable.background_hp),
-            contentDescription = stringResource(id = R.string.bg_description),
-            modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
-        )
+        BackgroundImage()
 
         Column(
             modifier = Modifier
@@ -122,4 +117,14 @@ fun TugasLoginScreenPreview() {
     ActBasicComposable_0230Theme {
         TugasLoginScreen()
     }
+}
+
+@Composable
+fun BackgroundImage() {
+    Image(
+        painter = painterResource(id = R.drawable.background_hp),
+        contentDescription = stringResource(id = R.string.bg_description),
+        modifier = Modifier.fillMaxSize(),
+        contentScale = ContentScale.Crop
+    )
 }

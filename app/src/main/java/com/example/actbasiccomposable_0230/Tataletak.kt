@@ -1,5 +1,6 @@
 package com.example.actbasiccomposable_0230
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -29,6 +30,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -44,6 +46,7 @@ import com.example.actbasiccomposable_0230.ui.theme.SoftBackground
 
 @Composable
 fun TugasLoginScreen(modifier: Modifier = Modifier) {
+    val context = LocalContext.current
     var username by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
@@ -81,7 +84,10 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(12.dp))
 
             LoginButtonSection(
-                onLoginClick = { /* Handle login click */ }
+                onLoginClick = {
+                    val message = if (username.isNotBlank()) "Selamat datang, $username!" else "Silakan isi username terlebih dahulu"
+                    Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+                }
             )
 
             Spacer(modifier = Modifier.height(12.dp))

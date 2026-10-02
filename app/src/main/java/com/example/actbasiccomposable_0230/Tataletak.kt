@@ -25,6 +25,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.actbasiccomposable_0230.ui.theme.ActBasicComposable_0230Theme
+import com.example.actbasiccomposable_0230.ui.theme.BluePrimary
+import com.example.actbasiccomposable_0230.ui.theme.DarkText
+import com.example.actbasiccomposable_0230.ui.theme.RedAccent
+import com.example.actbasiccomposable_0230.ui.theme.SoftBackground
 
 @Composable
 fun TugasLoginScreen(modifier: Modifier = Modifier) {
@@ -81,7 +85,7 @@ fun HeaderSection() {
         text = stringResource(id = R.string.login_title),
         fontSize = 26.sp,
         fontWeight = FontWeight.Bold,
-        color = Color.Blue
+        color = BluePrimary
     )
     Text(
         text = stringResource(id = R.string.login_subtitle),
@@ -105,19 +109,19 @@ fun UserInfoSection() {
     Text(
         text = stringResource(id = R.string.user_name_label),
         fontSize = 14.sp,
-        color = Color.Red
+        color = RedAccent
     )
     Text(
         text = stringResource(id = R.string.user_name),
         fontSize = 14.sp,
         fontWeight = FontWeight.Bold,
-        color = Color.Blue
+        color = BluePrimary
     )
     Text(
         text = stringResource(id = R.string.user_nim),
         fontSize = 20.sp,
         fontWeight = FontWeight.Bold,
-        color = Color.Black
+        color = DarkText
     )
 }
 
@@ -127,7 +131,7 @@ fun ProfileImageSection() {
         modifier = Modifier
             .size(290.dp)
             .clip(CircleShape)
-            .background(Color(0xFFE8E8F3))
+            .background(SoftBackground)
             .border(
                 width = 4.dp,
                 color = Color.White,

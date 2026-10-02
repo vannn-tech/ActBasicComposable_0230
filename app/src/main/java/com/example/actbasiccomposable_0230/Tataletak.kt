@@ -48,25 +48,7 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
 
             Spacer(modifier = Modifier.height(46.dp))
 
-            Text(
-                text = stringResource(id = R.string.user_name_label),
-                fontSize = 14.sp,
-                color = Color.Red
-            )
-
-            Text(
-                text = stringResource(id = R.string.user_name),
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color.Blue
-            )
-
-            Text(
-                text = stringResource(id = R.string.user_nim),
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color.Black
-            )
+            UserInfoSection()
 
             Spacer(modifier = Modifier.height(12.dp))
 
@@ -135,5 +117,26 @@ fun LogoSection() {
         contentDescription = stringResource(id = R.string.logo_description),
         modifier = Modifier.size(120.dp),
         contentScale = ContentScale.Fit
+    )
+}
+
+@Composable
+fun UserInfoSection() {
+    Text(
+        text = stringResource(id = R.string.user_name_label),
+        fontSize = 14.sp,
+        color = Color.Red
+    )
+    Text(
+        text = stringResource(id = R.string.user_name),
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold,
+        color = Color.Blue
+    )
+    Text(
+        text = stringResource(id = R.string.user_nim),
+        fontSize = 20.sp,
+        fontWeight = FontWeight.Bold,
+        color = Color.Black
     )
 }

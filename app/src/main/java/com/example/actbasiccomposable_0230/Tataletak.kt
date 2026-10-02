@@ -40,18 +40,7 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
                 .padding(top = 42.dp, start = 20.dp, end = 20.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = stringResource(id = R.string.login_title),
-                fontSize = 26.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color.Blue
-            )
-
-            Text(
-                text = stringResource(id = R.string.login_subtitle),
-                fontSize = 13.sp,
-                color = Color.White
-            )
+            HeaderSection()
 
             Spacer(modifier = Modifier.height(44.dp))
 
@@ -126,5 +115,20 @@ fun BackgroundImage() {
         contentDescription = stringResource(id = R.string.bg_description),
         modifier = Modifier.fillMaxSize(),
         contentScale = ContentScale.Crop
+    )
+}
+
+@Composable
+fun HeaderSection() {
+    Text(
+        text = stringResource(id = R.string.login_title),
+        fontSize = 26.sp,
+        fontWeight = FontWeight.Bold,
+        color = Color.Blue
+    )
+    Text(
+        text = stringResource(id = R.string.login_subtitle),
+        fontSize = 13.sp,
+        color = Color.White
     )
 }

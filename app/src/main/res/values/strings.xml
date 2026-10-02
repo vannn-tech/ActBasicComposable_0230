@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ActBasicComposable_0230</string>
+    <string name="login_title">Login</string>
+    <string name="login_subtitle">Ini adalah halaman login,</string>
+    <string name="user_name_label">Nama</string>
+    <string name="user_name">Pascal Pahlevi Pasha</string>
+    <string name="user_nim">20000140001</string>
+    <string name="bg_description">Gambar latar belakang</string>
+    <string name="logo_description">Logo UMY</string>
+    <string name="profile_description">Foto profil</string>
 </resources>

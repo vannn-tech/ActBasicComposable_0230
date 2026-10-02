@@ -19,6 +19,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -29,10 +30,9 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        // Pastikan background_hp.jpg ada di res/drawable
         Image(
             painter = painterResource(id = R.drawable.background_hp),
-            contentDescription = "Gambar latar belakang",
+            contentDescription = stringResource(id = R.string.bg_description),
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
@@ -44,24 +44,23 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Login",
+                text = stringResource(id = R.string.login_title),
                 fontSize = 26.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.Blue
             )
 
             Text(
-                text = "Ini adalah halaman login,",
+                text = stringResource(id = R.string.login_subtitle),
                 fontSize = 13.sp,
                 color = Color.White
             )
 
             Spacer(modifier = Modifier.height(44.dp))
 
-            // Pastikan logo_umy.png ada di res/drawable
             Image(
                 painter = painterResource(id = R.drawable.logo_umy),
-                contentDescription = "Logo",
+                contentDescription = stringResource(id = R.string.logo_description),
                 modifier = Modifier.size(120.dp),
                 contentScale = ContentScale.Fit
             )
@@ -69,20 +68,20 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(46.dp))
 
             Text(
-                text = "Nama",
+                text = stringResource(id = R.string.user_name_label),
                 fontSize = 14.sp,
                 color = Color.Red
             )
 
             Text(
-                text = "Pascal Pahlevi Pasha",
+                text = stringResource(id = R.string.user_name),
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.Blue
             )
 
             Text(
-                text = "20000140001",
+                text = stringResource(id = R.string.user_nim),
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.Black
@@ -102,10 +101,9 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
                     ),
                 contentAlignment = Alignment.Center
             ) {
-                // Nama resource yang benar: foto_masjid.jpg
                 Image(
                     painter = painterResource(id = R.drawable.foto_masjid),
-                    contentDescription = "Foto profil",
+                    contentDescription = stringResource(id = R.string.profile_description),
                     modifier = Modifier
                         .fillMaxSize()
                         .clip(CircleShape),

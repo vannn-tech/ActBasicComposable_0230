@@ -208,3 +208,23 @@ fun LoginInputSection(
         )
     }
 }
+
+@Composable
+fun LoginButtonSection(
+    onLoginClick: () -> Unit
+) {
+    Button(
+        onClick = onLoginClick,
+        colors = ButtonDefaults.buttonColors(containerColor = BluePrimary),
+        shape = RoundedCornerShape(8.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp)
+    ) {
+        Text(
+            text = stringResource(id = R.string.login_button),
+            color = Color.White,
+            fontWeight = FontWeight.Bold
+        )
+    }
+}

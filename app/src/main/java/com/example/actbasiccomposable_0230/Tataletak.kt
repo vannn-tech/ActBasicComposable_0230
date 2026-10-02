@@ -52,27 +52,7 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            Box(
-                modifier = Modifier
-                    .size(290.dp)
-                    .clip(CircleShape)
-                    .background(Color(0xFFE8E8F3))
-                    .border(
-                        width = 4.dp,
-                        color = Color.White,
-                        shape = CircleShape
-                    ),
-                contentAlignment = Alignment.Center
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.foto_masjid),
-                    contentDescription = stringResource(id = R.string.profile_description),
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .clip(CircleShape),
-                    contentScale = ContentScale.Crop
-                )
-            }
+            ProfileImageSection()
         }
     }
 }
@@ -139,4 +119,29 @@ fun UserInfoSection() {
         fontWeight = FontWeight.Bold,
         color = Color.Black
     )
+}
+
+@Composable
+fun ProfileImageSection() {
+    Box(
+        modifier = Modifier
+            .size(290.dp)
+            .clip(CircleShape)
+            .background(Color(0xFFE8E8F3))
+            .border(
+                width = 4.dp,
+                color = Color.White,
+                shape = CircleShape
+            ),
+        contentAlignment = Alignment.Center
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.foto_masjid),
+            contentDescription = stringResource(id = R.string.profile_description),
+            modifier = Modifier
+                .fillMaxSize()
+                .clip(CircleShape),
+            contentScale = ContentScale.Crop
+        )
+    }
 }
